@@ -27,7 +27,10 @@ async function searchImages() {
         })
         showMoreBtn.style.display = 'block';     
     }
-
+showMoreBtn.addEventListener('click', () => {
+    page++;
+    searchImages();
+});
     searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     page = 1;
